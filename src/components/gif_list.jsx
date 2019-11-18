@@ -6,13 +6,14 @@ import Gif from './gif.jsx';
 class GifList extends Component {
   renderList = () => {
     // Implicit return with oneliner
-    return this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} /> )
+    // return this.props.gifs.map(gif => <Gif id={gif.id} key={gif.id} /> )
 
     // Explicit return
-    // return this.props.gifs.map(gif => {
-    //   return <Gif id={gif.id} key={gif.id} />
-    // })
+    return this.props.gifs.map(gif => {
+      return <Gif id={gif.id} key={gif.id} />
+    })
   }
+
   render() {
     return (
       <div className="gif-list">
